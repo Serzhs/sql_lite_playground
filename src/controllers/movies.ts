@@ -3,7 +3,7 @@ import {openDb as db} from "../db/db";
 
 const router = Router()
 
-router.get('/', (req: Request, res: Response) => {
+router.all('/', (req: Request, res: Response) => {
   db.get(`
       SELECT * FROM movies
     `,(err, row) => {
